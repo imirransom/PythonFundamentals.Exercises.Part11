@@ -44,23 +44,23 @@ class Instructor(Person):
         def __init__(self, students: list, instructors: list):
             self.students = students
             self.instructors = instructors
-
-
         def add_instructor(self, name):
             return self.instructors.append(name)
 
         def remove_instructor(self, name):
             return self.instructors.remove(name)
 
-        def add_student(self):
-            pass
+        def add_student(self, name):
+            return self.students.append(name)
 
-        def remove_student(self):
-            pass
+        def remove_student(self, name):
+            return self.students.remove(name)
 
         def print_instructors(self):
-            print(self.instructors)
+            for instructor in self.instructors:
+                print(instructor)
 
         def print_students(self):
-            print(self.students)
+            for student in self.students:
+                print(student)
 
